@@ -72,13 +72,7 @@ if __name__ == '__main__':
     cfg = None
     if args.network == "mobile0.25":
         cfg = cfg_mnet
-    elif args.network == "resnet50":
-        cfg = cfg_re50
-    elif args.network == "efficient":
-        cfg = cfg_efficient
-   
-
-
+    
     # net and model
     net = RetinaFace(cfg=cfg, phase = 'test')
     net = load_model(net, args.trained_model, args.cpu)
